@@ -29,7 +29,7 @@ for i in `ls -d */`; do
         # If on-git-pull.sh is present - execute it
         if [[ -x "on-git-pull.sh" ]]; then
             log "Script 'on-git-pull.sh' found in $i. About to execute it.";
-            ./on-git-pull.sh | tee -a ${LOG_FILE_FULL_PATH}
+            ./on-git-pull.sh | tee -a ${LOG_FILE_FULL_PATH} &
         fi;
     fi;
 
